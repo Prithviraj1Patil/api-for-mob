@@ -1,0 +1,22 @@
+server:
+  port: 7070
+  servlet:
+    context-path: /cms
+    session:
+      persistent: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/divyang2?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
